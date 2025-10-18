@@ -121,6 +121,14 @@ namespace Meta.XR.BuildingBlocks.AIBlocks
             StartCoroutine(CoListenOnce());
         }
 
+        [ContextMenu("STT/Call Write To Board")]
+        public void CallWriteToBoard()
+        {
+            Debug.LogWarning("TESTTETSTSEOTIOESTJOIEAT");
+            Recommendations recommendations = FindObjectOfType<Recommendations>();
+            recommendations.WriteToBoard();
+        }
+
         [ContextMenu("STT/Stop Now")]
         public void StopNow()
         {

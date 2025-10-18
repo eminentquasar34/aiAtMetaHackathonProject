@@ -21,6 +21,7 @@
 using System.Collections.Generic;
 using Meta.XR.ImmersiveDebugger;
 using UnityEngine;
+// using TMPro;
 
 namespace Meta.XR.BuildingBlocks.AIBlocks
 {
@@ -60,6 +61,8 @@ namespace Meta.XR.BuildingBlocks.AIBlocks
 
         [Tooltip("Direct URL to an image. Only used when Image Source = ImageUrl.")]
         [SerializeField] private string promptImageUrl;
+
+        // [SerializeField] private TextMeshProUGUI recommendations;
 
 
         private LlmAgent _agent;
@@ -175,6 +178,19 @@ namespace Meta.XR.BuildingBlocks.AIBlocks
                     break;
             }
         }
+
+        // public void WriteToBoard()
+        // {
+        //     var map = new Dictionary<string, int>();
+        //     map.Add("test1", 1);
+        //     map.Add("test2", 2);
+
+        //     string str = "";
+        //     foreach (var entry in map)
+        //     {
+        //         str += $"Website: {entry.Key}, Cost: {entry.Value}";
+        //     }
+        // }
 
         private static string GetDefaultPromptText(DefaultPromptOption o) => o switch
         {
