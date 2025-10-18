@@ -13952,6 +13952,66 @@ MonoBehaviour:
           DisplayName: 
         memberName: Stop
         _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: UnityEngine.AudioSource, UnityEngine.AudioModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: Play
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: UnityEngine.AudioSource, UnityEngine.AudioModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: Stop
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: UnityEngine.AudioSource, UnityEngine.AudioModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: Play
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: UnityEngine.AudioSource, UnityEngine.AudioModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: Stop
+        _editorSelectedGizmoIndex: 0
     - enabled: 0
       typeName: SceneLoader, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       inspectedMembers:

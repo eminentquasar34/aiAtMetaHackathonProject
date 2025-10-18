@@ -28,9 +28,9 @@ using UnityEngine.Rendering;
 using UnityEngine.XR;
 using Meta.XR.EnvironmentDepth;
 
-#if XROCULUS_INSTALLED
-using Unity.XR.Oculus;
-#endif
+// #if XROCULUS_INSTALLED
+// using Unity.XR.Oculus;
+// #endif
 
 #if META_OPENXR_INSTALLED
 using UnityEngine.XR.OpenXR;
@@ -200,12 +200,12 @@ namespace Meta.XR.BuildingBlocks.AIBlocks
                 return Backend.OpenXRMeta;
             }
 #endif
-#if XROCULUS_INSTALLED
-            if (Utils.GetEnvironmentDepthSupported())
-            {
-                return Backend.OculusXR;
-            }
-#endif
+// #if XROCULUS_INSTALLED
+//             if (Utils.GetEnvironmentDepthSupported())
+//             {
+//                 return Backend.OculusXR;
+//             }
+// #endif
             Debug.LogWarning("No supported depth backend detected.");
             return Backend.Unknown;
         }
@@ -218,10 +218,10 @@ namespace Meta.XR.BuildingBlocks.AIBlocks
 
             switch (_backend)
             {
-#if XROCULUS_INSTALLED
-                case Backend.OculusXR:
-                    return TryFetchOculus(out depthTexture);
-#endif
+// #if XROCULUS_INSTALLED
+//                 case Backend.OculusXR:
+//                     return TryFetchOculus(out depthTexture);
+// #endif
 #if META_OPENXR_INSTALLED
                 case Backend.OpenXRMeta:
                     return TryFetchOpenXR(out depthTexture);
@@ -231,18 +231,18 @@ namespace Meta.XR.BuildingBlocks.AIBlocks
             }
         }
 
-#if XROCULUS_INSTALLED
-        private bool TryFetchOculus(out RenderTexture depthTexture)
-        {
-            depthTexture = null;
-            uint texId = 0;
-            if (!Utils.GetEnvironmentDepthTextureId(ref texId)) return false;
-            if (_prevOculusTextureId == texId) return false;
-            _prevOculusTextureId = texId;
-            depthTexture = _xrDisplay.GetRenderTexture(texId);
-            return depthTexture != null && depthTexture.IsCreated();
-        }
-#endif
+// #if XROCULUS_INSTALLED
+//         private bool TryFetchOculus(out RenderTexture depthTexture)
+//         {
+//             depthTexture = null;
+//             uint texId = 0;
+//             if (!Utils.GetEnvironmentDepthTextureId(ref texId)) return false;
+//             if (_prevOculusTextureId == texId) return false;
+//             _prevOculusTextureId = texId;
+//             depthTexture = _xrDisplay.GetRenderTexture(texId);
+//             return depthTexture != null && depthTexture.IsCreated();
+//         }
+// #endif
 
 #if META_OPENXR_INSTALLED
         private static bool TryFetchOpenXR(out RenderTexture depthTexture)

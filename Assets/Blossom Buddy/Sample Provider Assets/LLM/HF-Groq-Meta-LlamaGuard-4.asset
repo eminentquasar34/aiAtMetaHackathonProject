@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: HF-Groq-Meta-LlamaGuard-4
   m_EditorClassIdentifier: 
   supportedInferenceTypes: 1
-  apiKey: 
+  apiKey: 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
   modelId: meta-llama/llama-guard-4-12b
   endpoint: https://api.groq.com/openai/v1/chat/completions
   supportsVision: 1

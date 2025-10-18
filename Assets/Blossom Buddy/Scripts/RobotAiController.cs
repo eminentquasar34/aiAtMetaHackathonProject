@@ -13,11 +13,9 @@ public class RobotAiController : MonoBehaviour
 {
     [SerializeField, Range(0f, 2f)] private float landingXOffset = 0.3f;
 
-    [SerializeField] private string systemPrompt =
-        "You are a friendly cute assistant that just got a question. " +
-        "Answer the user in a funny way that you got the order and you are working on it. But keep it in one sentence." +
-        "You will go to the requested location, gather information for him and come up with a description of the object. " +
-        "Answer to this prompt in maximum one sentence. Be creative everytime to switch up your answers";
+    [SerializeField]
+    private string systemPrompt =
+        "You WILL receive a picture. You MUST identify the product in focus. You MUST describe the product such that it is easily identifiable. You MUST keep to 15 words or less.";
 
     private MetaMaticAnimController _robot;
     private ObjectDetectionAgent _detector;
@@ -206,9 +204,7 @@ public class RobotAiController : MonoBehaviour
 
         var prompt = string.IsNullOrEmpty(detectedLabel) ? userText
             : $"{userText}\n\nThe detected object looks like a {detectedLabel}. Only answer about this object and in " +
-              $"one sentence. It should be a useful information, and be funny. Don't answer to this: Keep in mind that " +
-              $"the object in question may not be accurately described. The user may say tv and it is a PC screen, " +
-              $"or he may say dining table but it might be a coffee table.";
+              $"one sentence. It should be a useful information.";
 
         _ = _llm.SendPromptWithPassthroughImageAsync(prompt); // falls back to text if camera not available :contentReference[oaicite:6]{index=6}
 

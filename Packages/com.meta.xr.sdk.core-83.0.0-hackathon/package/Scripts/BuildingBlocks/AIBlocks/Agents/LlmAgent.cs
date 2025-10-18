@@ -20,9 +20,11 @@
 
 using System;
 using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Networking;
 
 namespace Meta.XR.BuildingBlocks.AIBlocks
 {
@@ -168,9 +170,25 @@ namespace Meta.XR.BuildingBlocks.AIBlocks
                 }
 #endif
                 var assistant = res?.text ?? string.Empty;
+                // Serp GET Request
+                string response;
+                string url = $"https://serpapi.com/search.json?q={assistant}&location={"Menlo Park, " + "California," + " United States"}&hl=en&gl=us&google_domain=google.com&api_key={"alphamega"}";
+                using (UnityWebRequest request = UnityWebRequest.Get(url))
+                {
+                    var operation = request.SendWebRequest();
+                    while (!operation.isDone)                    
+                    {
+                        await Task.Yield();
+                    }
+                    response = request.downloadHandler.text;
+                }
+                Recommendations recommendations = FindObjectOfType<Recommendations>();
+                recommendations.WriteToBoard(response);
+
+                string word = "I got your data, check Unity to see more";
                 _history.Add($"Assistant: {assistant}");
-                OnAssistantReply?.Invoke(assistant);
-                onResponseReceived?.Invoke(assistant);
+                OnAssistantReply?.Invoke(word);
+                onResponseReceived?.Invoke(word);
             }
             catch (Exception ex)
             {

@@ -1902,8 +1902,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78fe762148452284580b7977321a431c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userInput: What do you see on this image?
-  selectedPrompt: 0
+  userInput: You WILL receive a picture. You MUST identify the product in focus.
+    You MUST describe the product such that it is easily identifiable. You MUST keep
+    to 15 words or less.
+  selectedPrompt: 3
   includeImage: 1
   imageSource: 0
   promptImage: {fileID: 2800000, guid: ba234129451db284baa574c1678e21ac, type: 3}

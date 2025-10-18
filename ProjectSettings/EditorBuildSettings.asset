@@ -11,11 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Blossom Buddy/Scenes/LLM Sample.unity
     guid: c9b632c158ee942a6b4a8b93cd00b399
-  - enabled: 1
+  - enabled: 0
     path: Assets/Blossom Buddy/Scenes/Object Detection Sample.unity
     guid: 49472daa638b6450ebdf9ddaee4ce648
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 4e2c9187e50e2447e8c83783b32cad2f, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 179b64c476cd44e4ba4b2b8befb972db, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: ecd9d5e720d07413cb8ca6d86bc674d3, type: 2}
   m_UseUCBPForAssetBundles: 0

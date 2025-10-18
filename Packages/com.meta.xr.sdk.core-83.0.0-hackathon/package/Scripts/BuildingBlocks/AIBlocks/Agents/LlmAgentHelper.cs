@@ -28,7 +28,8 @@ namespace Meta.XR.BuildingBlocks.AIBlocks
     {
         DescribeImage,
         CapitalOfSwitzerland,
-        Greeting
+        Greeting,
+        DescribeProduct
     }
 
     public enum PromptImageSource
@@ -110,7 +111,8 @@ namespace Meta.XR.BuildingBlocks.AIBlocks
         [DebugMember(Category = "LLM Agent")]
         public void SendPrompt()
         {
-            var text = !string.IsNullOrWhiteSpace(userInput) ? userInput : GetDefaultPromptText(selectedPrompt);
+            // var text = !string.IsNullOrWhiteSpace(userInput) ? userInput : GetDefaultPromptText(selectedPrompt);
+            var text = "Describe the product you see in ten words or less, including brand, colors, style, size, etc (anything descriptive to help someone visualize/identify the product)";
 
             if (string.IsNullOrWhiteSpace(text))
             {
@@ -178,6 +180,7 @@ namespace Meta.XR.BuildingBlocks.AIBlocks
 
         private static string GetDefaultPromptText(DefaultPromptOption o) => o switch
         {
+            DefaultPromptOption.DescribeProduct => "You WILL receive a picture. You MUST identify the product in focus. You MUST describe the product such that it is easily identifiable. You MUST keep to 15 words or less.",
             DefaultPromptOption.DescribeImage => "What do you see on this image?",
             DefaultPromptOption.CapitalOfSwitzerland => "What is the capital of Switzerland?",
             DefaultPromptOption.Greeting => "Hi, how are you?",
