@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: HF-HFInference-Meta-DETR
   m_EditorClassIdentifier: 
   supportedInferenceTypes: 1
-  apiKey: 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
+  apiKey: na
   modelId: meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8
   endpoint: https://router.huggingface.co/v1/chat/completions
   supportsVision: 1
