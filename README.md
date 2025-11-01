@@ -70,6 +70,7 @@ from decision fatigue to effortless discovery.
 
 ## 📍 Team
 Developed by Benoit Le, Isayiah Lim, Aayush Sharma, Sai Gudisa, Daniel Zhang
+
 Part of the **AI at Meta Hackathon**
 
 ---
