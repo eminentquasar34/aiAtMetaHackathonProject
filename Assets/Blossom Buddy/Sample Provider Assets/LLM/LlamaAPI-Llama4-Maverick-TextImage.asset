@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LlamaAPI-Llama4-Maverick-TextImage
   m_EditorClassIdentifier: 
   supportedInferenceTypes: 1
-  apiKey: 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
+  apiKey: na
   endpointUrl: https://api.llama.com/v1/chat/completions
   model: Llama-4-Maverick-17B-128E-Instruct-FP8
   supportsVision: 1
